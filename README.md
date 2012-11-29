@@ -7,18 +7,19 @@ Using the new controller plugin __acceptableViewModelSelector()__ you can select
 
 ## Require
 PHP >= 5.3.3
+
 Zend Framework >= 2.0.4
 
 ## Installation
 ### with Composer
-Add ```"ap/ap-xml-strategy": "dev-master"``` to your composer.json file and run ```php composer.phar update``.
+Add ```"ap/ap-xml-strategy": "dev-master"``` to your composer.json file and run ```php composer.phar update```.
 ### with Git submodule
 Clone this project to your ```./vendor/`` directory:
 ```
 git submodule add git://github.com/alessandropietrobelli/AP_XmlStrategy.git vendor/AP_XmlStrategy
 ```
 
-* Enable it on your application.config.php file
+### Enable it on your application.config.php file
 
 ```php
 <?php
@@ -30,7 +31,7 @@ return array(
     // ...
 );
 ```
-#### By composer
+
 
 
 ## Post Installation
