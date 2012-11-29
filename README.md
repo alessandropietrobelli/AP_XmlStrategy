@@ -10,8 +10,8 @@ Using the new controller plugin __acceptableViewModelSelector()__ you can select
 #### By cloning Project
 * Clone this project to your ./vendor/ directory
 * Enabling it on your application.config.php file
+
 ```php
-<?php
 <?php
 return array(
     'modules' => array(
@@ -21,9 +21,11 @@ return array(
     // ...
 );
 ```
+
 ## Post Installation
 Like on Zend Framework 2.0.4 change log example
 ```php
+<?php
 namespace SomeNamespace\Controller;
 
 use Zend\View\Model\JsonModel;
@@ -71,3 +73,4 @@ class SomeController extends AbstractActionController
     }
 }
 ```
+
