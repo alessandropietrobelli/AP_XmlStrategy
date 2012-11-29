@@ -19,7 +19,7 @@ Clone this project to your ```./vendor/`` directory:
 git submodule add git://github.com/alessandropietrobelli/AP_XmlStrategy.git vendor/AP_XmlStrategy
 ```
 
-### Enable it on your application.config.php file
+### enable it on your application.config.php file
 
 ```php
 <?php
