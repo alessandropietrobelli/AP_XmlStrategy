@@ -1,0 +1,27 @@
+{
+    "name": "ap/ap-xml-strategy",
+    "type": "library",
+    "description": "XmlStrategy for Zend Framework 2. AP_XmlStrategy select the Xml Render if the ViewModel is an XmlModel or if the Accept header contains 'application/xml' media type.",
+    "keywords": ["xml","strategy","xmlstrategy","zf2","zendframework"],
+    "homepage": "http://github.com/alessandropietrobelli/AP_XmlStrategy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alessandro Pietrobelli",
+            "email": "alessandro.pietrobelli@gmail.com",
+            "homepage": "http://alessandropietrobelli.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": ">=2.0.4"
+    },
+    "autoload": {
+        "psr-0": {
+            "AP_XmlStrategy": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}

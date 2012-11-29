@@ -1,15 +1,24 @@
 # AP_XmlStrategy
-Version 0.1 created by Alessandro Pietrobelli
+Version 1.0.0 created by Alessandro Pietrobelli
 
 ## Description
 Like the latest changes on Zend Framework 2.0.4 version, AP_XmlStrategy select the Xml Render if the ViewModel is  an XmlModel or if the Accept header contains "application/xml" media type.
 Using the new controller plugin __acceptableViewModelSelector()__ you can select and set the appropriate ViewModel if Accept header meets criteria you specify
 
+## Require
+PHP >= 5.3.3
+Zend Framework >= 2.0.4
+
 ## Installation
-### Setup
-#### By cloning Project
-* Clone this project to your ./vendor/ directory
-* Enabling it on your application.config.php file
+### with Composer
+Add ```"ap/ap-xml-strategy": "dev-master"``` to your composer.json file and run ```php composer.phar update``.
+### with Git submodule
+Clone this project to your ```./vendor/`` directory:
+```
+git submodule add git://github.com/alessandropietrobelli/AP_XmlStrategy.git vendor/AP_XmlStrategy
+```
+
+* Enable it on your application.config.php file
 
 ```php
 <?php
@@ -21,6 +30,8 @@ return array(
     // ...
 );
 ```
+#### By composer
+
 
 ## Post Installation
 Like on Zend Framework 2.0.4 change log example
