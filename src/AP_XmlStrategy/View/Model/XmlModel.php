@@ -7,6 +7,7 @@
 namespace AP_XmlStrategy\View\Model;
 
 use Zend\View\Model\ViewModel;
+use Zend\Stdlib\ArrayUtils;
 use AP_XmlStrategy\Xml\Array2XML;
 
 /**
@@ -40,6 +41,11 @@ class XmlModel extends ViewModel
      * @var string
      */
     protected $version = '1.0';
+
+    /**
+     * @var string
+     */
+    protected $rootNode = 'response';
 
     /**
      * @param string $encoding
@@ -81,20 +87,34 @@ class XmlModel extends ViewModel
         return $this->version;
     }
 
+    /**
+     * @param string $rootNode
+     */
+    public function setRootNode($rootNode)
+    {
+        $this->rootNode = $rootNode;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRootNode()
+    {
+        return $this->rootNode;
+    }
+
 
     public function serialize()
     {
         $variables = $this->getVariables();
         
-        if ($variables instanceof Traversable) {
+        if (is_a($variables, 'Traversable')) {
             $variables = ArrayUtils::iteratorToArray($variables);
         }
         
-        array_walk_recursive($variables, array ($xml, 'addChild'));
-
         Array2XML::init($this->version, $this->encoding);
 
-        $xml = Array2XML::createXML('response', $variables);
+        $xml = Array2XML::createXML($this->rootNode, $variables);
 
         return $xml->saveXML();
     }
